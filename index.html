@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculadora Básica</title>
+</head>
+
+<body>
+
+  <a id="menu" href="#"></a>
+  <nav>
+    <ul class="navigation">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Nosotros</a></li>
+      <li><a href="#">Productos</a></li>
+      <li><a href="#">Feedback</a></li>
+      <li><a href="#">Historia</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <h1 class="title"><br><br>Calculadora</h1> <br>
+  <div class="container">
+    <!-- <input type="text" id="num" class="numb" pattern="[0-9]*" oninput="this.value = this.value.replace(/[^0-9]/g, '');"> -->
+    <input type="text" id="pantalla" class="pantalla" readonly>
+    <br><br>
+    <button type="button" class="numero" onclick="agregarNumero(7)">7</button>
+    <button type="button" class="numero" onclick="agregarNumero(8)">8</button>
+    <button type="button" class="numero" onclick="agregarNumero(9)">9</button>
+    <button type="button" class="operacion" onclick="seleccionarOperacion('+')">+</button>
+
+    <br>
+    <button type="button" class="numero" onclick="agregarNumero(4)">4</button>
+    <button type="button" class="numero" onclick="agregarNumero(5)">5</button>
+    <button type="button" class="numero" onclick="agregarNumero(6)">6</button>
+    <button type="button" class="operacion" onclick="seleccionarOperacion('-')">-</button>
+    <br>
+    <button type="button" class="numero" onclick="agregarNumero(1)">1</button>
+    <button type="button" class="numero" onclick="agregarNumero(2)">2</button>
+    <button type="button" class="numero" onclick="agregarNumero(3)">3</button>
+    <button type="button" class="operacion" onclick="seleccionarOperacion('*')">x</button>
+    <br>
+    <button type="button" class="operacion">&nbsp;&nbsp;</button>
+    <button type="button" class="numero" onclick="agregarNumero(0)">0</button>
+    <button type="button" class="operacion" onclick="borrarPantalla()">C</button>
+    <button type="button" class="operacion" onclick="seleccionarOperacion('/')">/</button>
+    <br><br>
+    <button type="button" class="operacion" onclick="calcular()">=</button>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
